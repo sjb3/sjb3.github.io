@@ -1,0 +1,55 @@
+@import "_theme";
+
+.app-ham {
+  position: relative;
+  // border: red 1px solid;
+  height: 25px;
+  // border: blue 2px dotted;
+
+  .fa-bars {
+    position: absolute;
+    z-index: 100;
+    font-size: 30px;
+    color: $app-light;
+    opacity: 0.7;
+    padding-left: 20px;
+    padding-top: 20px;
+
+    &:hover {
+      color: $app-default;
+    }
+
+    &:active {
+      color: #eef90c;
+    }
+  }
+
+}
+
+.ham-exit.ng-leave {
+  animation: my_fade_animation 0.2s linear;
+  * {
+    animation: my_fade_animation 0.2s linear;
+  }
+}
+
+.ham-exit.ng-enter {
+  animation: my_fade_animation 0.2s linear reverse;
+  * {
+    animation: my_fade_animation 0.2s linear reverse;
+  }
+}
+
+@keyframes my_fade_animation {
+0% {
+  left: 0;
+}
+100% {
+    left: -100;
+}
+  // from {
+  //   opacity: 0.5;
+  // } to {
+  //   opacity: 0;
+  // }
+}
